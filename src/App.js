@@ -1,9 +1,10 @@
-import React,{ lazy,Suspense } from "react";
+import React from "react";
 import { GlobalStyle } from "./global-styles";
 
 import { Switch, Route, Redirect } from "react-router-dom";
 import { createStructuredSelector } from "reselect";
 
+import Homepage from "./pages/homepage/homepage-component";
 import ShopPage from "./pages/shop/shop-component";
 import Header from "./components/header/header-component";
 import SignInSignUpPage from "./pages/sign-in-sign-up/sign-in-sign-up-component";
@@ -14,7 +15,6 @@ import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user-actions";
 import { selectCurrentUser } from "./redux/user/user-selector";
 
-const Homepage = lazy(()=> import ('./pages/homepage/homepage-component')) 
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -48,9 +48,7 @@ class App extends React.Component {
         <GlobalStyle />
         <Header />
         <Switch>
-          <Suspense fallback={<div>...Loading</div>}>
            <Route exact path="/" component={Homepage} />
-          </Suspense>
           <Route path="/shop" component={ShopPage} />
           <Route
             path="/checkout"
