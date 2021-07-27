@@ -3,12 +3,12 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: "AIzaSyBpaZ8Y_4rtvh2AWbykspZMQyXt_rtB_H8",
-    authDomain: "e-commerce-901ae.firebaseapp.com",
-    projectId: "e-commerce-901ae",
-    storageBucket: "e-commerce-901ae.appspot.com",
-    messagingSenderId: "278656415089",
-    appId: "1:278656415089:web:f240a79ad717278bb572d0"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 
 }
 
